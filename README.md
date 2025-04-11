@@ -39,3 +39,27 @@ This is a minimal interpreter for a custom programming language designed for the
 - `examples/`: Sample programs
 - `docs/`: Design documents and diagrams
 
+small-lang/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── src/
+│   ├── Main.java
+│   ├── Lexer.java
+│   ├── Parser.java
+│   ├── AST/
+│   │   ├── Node.java
+│   │   ├── BinaryOpNode.java
+│   │   ├── IfNode.java
+│   │   └── ...
+│   ├── Interpreter.java
+│   ├── Environment.java
+│   └── BuiltinFunctions.java
+├── tests/
+│   ├── LexerTest.java
+│   ├── ParserTest.java
+│   └── InterpreterTest.java
+├── examples/
+│   └── sample1.txt
+└── docs/
+    └── class_diagram.png
