@@ -1,0 +1,1 @@
+//Represents a variable reference (e.g., use of a declared variable).

@@ -1,0 +1,1 @@
+//Represents a binary operation node (e.g., a + b).

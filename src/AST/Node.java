@@ -1,0 +1,1 @@
+//An abstract class or interface; the parent type of all AST nodes.

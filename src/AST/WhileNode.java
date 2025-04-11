@@ -1,0 +1,1 @@
+//Represents a while loop control structure.
