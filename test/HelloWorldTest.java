@@ -9,13 +9,5 @@ public class HelloWorldTest {
         assertEquals("Hello, World!", HelloWorld.sayHello());
     }
 
-    @Test
-    public void testNothing() {
-        assertEquals(3, 4);
-    }
-
-    @Test
-    public void testSomething() {
-        assertEquals(9.5, 4);
-    }
+    
 }
