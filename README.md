@@ -21,3 +21,21 @@ Here's a small edit!
 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 🌶 
 😂 😂 😂 😂 😂 😂 😂 😂 
 asdjflkasjdfkl
+
+
+# Small Programming Language Interpreter
+
+This is a minimal interpreter for a custom programming language designed for the CIT 5940 final project.
+
+## Features (To Be Implemented)
+- Variable declaration and assignment
+- Arithmetic operations (+, -, *, /, %)
+- Control structures (`if`, `while`)
+- Built-in functions (`print`, `abs`)
+
+## Folder Structure
+- `src/`: Source code
+- `tests/`: Unit tests
+- `examples/`: Sample programs
+- `docs/`: Design documents and diagrams
+
