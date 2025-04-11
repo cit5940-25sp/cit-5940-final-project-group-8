@@ -63,3 +63,13 @@ small-lang/
 │   └── sample1.txt
 └── docs/
     └── class_diagram.png
+
+2.
+| **Pattern**   | **How to Represent It in the Class Diagram**                                                                 |
+|---------------|---------------------------------------------------------------------------------------------------------------|
+| **Interpreter** | Create a `Node` interface or abstract class. All AST node classes (e.g., `NumberNode`, `BinaryOpNode`) implement it. |
+| **Singleton**   | In the `Environment` class, add a comment like `// Singleton Pattern` and show a `getInstance()` static method. |
+| **Factory**     | Include a `NodeFactory` class in the diagram. Show it is responsible for creating different `Node` subclass instances. |
+
+
+3.
