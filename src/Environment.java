@@ -1,0 +1,1 @@
+//Represents the variable scope; stores variable names and their integer values.
