@@ -39,30 +39,7 @@ This is a minimal interpreter for a custom programming language designed for the
 - `examples/`: Sample programs
 - `docs/`: Design documents and diagrams
 
-small-lang/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── src/
-│   ├── Main.java
-│   ├── Lexer.java
-│   ├── Parser.java
-│   ├── AST/
-│   │   ├── Node.java
-│   │   ├── BinaryOpNode.java
-│   │   ├── IfNode.java
-│   │   └── ...
-│   ├── Interpreter.java
-│   ├── Environment.java
-│   └── BuiltinFunctions.java
-├── tests/
-│   ├── LexerTest.java
-│   ├── ParserTest.java
-│   └── InterpreterTest.java
-├── examples/
-│   └── sample1.txt
-└── docs/
-    └── class_diagram.png
+
 
 2.
 | **Pattern**   | **How to Represent It in the Class Diagram**                                                                 |
@@ -71,5 +48,3 @@ small-lang/
 | **Singleton**   | In the `Environment` class, add a comment like `// Singleton Pattern` and show a `getInstance()` static method. |
 | **Factory**     | Include a `NodeFactory` class in the diagram. Show it is responsible for creating different `Node` subclass instances. |
 
-
-3.
