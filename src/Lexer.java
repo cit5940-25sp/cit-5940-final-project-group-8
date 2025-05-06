@@ -14,7 +14,7 @@ public class Lexer {
         // Constructor: takes the raw source code string as input
         // lexer is supposed to take in a .txt file
         this.source = source;
-        this.keywordList = List.of("var", "function", "return", "if", "elif", "else", "while", "run", "print", "input");
+        this.keywordList = List.of("var", "function", "return", "if", "elif", "else", "while", "rum", "print", "input");
     }
 
     public List<Token> tokenize(String fileName) {
@@ -24,17 +24,12 @@ public class Lexer {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             // read character by character
             StringBuilder curr = new StringBuilder();
-//            boolean skipNextChar = false;
-//            while ((this.c = br.read()) != -1 || skipNextChar) {
-            while ((this.c = br.read()) != -1) {
-//                if (skipNextChar) {
-//                    skipNextChar = false;
-//                } else {
-//                    this.c = br.read();
-//                    if (this.c == -1) {
-//                        break;
-//                    }
-//                }
+            boolean skipNextChar = false;
+            while ((this.c = br.read()) != -1 || skipNextChar) {
+                if (skipNextChar) {
+                    skipNextChar = false;
+                    continue;
+                }
                 char ch = (char) c;
                 // if it's a whitespace then continue reading
                 if (Character.isWhitespace(ch)) {
@@ -50,7 +45,7 @@ public class Lexer {
                         char nextCh = (char) c;
                         if (!Character.isDigit(nextCh)) {
                             br.reset();
-//                            skipNextChar = true;
+                            skipNextChar = true;
                             break;
                         }
                         curr.append(nextCh);
@@ -71,7 +66,7 @@ public class Lexer {
                         char nextCh = (char) c;
                         if (!Character.isAlphabetic(nextCh)) {
                             br.reset();
-//                            skipNextChar = true;
+                            skipNextChar = true;
                             break;
                         }
                         curr.append(nextCh);
@@ -83,7 +78,6 @@ public class Lexer {
                     } else {
                         keyword(curr.toString());
                     }
-                    continue;
                 }
                 // Symbols and operator
                 switch (c) {
@@ -193,6 +187,15 @@ public class Lexer {
         return tokens; // placeholder
     }
 
+
+//    private void identifier() {
+//        // Reads a full identifier or keyword, adds corresponding token
+//        // reads entire sequence of characters
+//        /*
+//        All identifiers (variable names and functions) must consist only of lowercase letters and underscores (_).
+//        this_is is a valid variable name, but thisIsNot is not.
+//        */
+
     private void keyword(String keyword) {
         switch (keyword) {
             case "var":
@@ -231,11 +234,19 @@ public class Lexer {
                 tokenMap.put("input",TokenType.INPUT);
                 tokens.add(new Token(TokenType.INPUT, keyword));
                 break;
-            // add in while
-            case "while":
-                tokenMap.put("while",TokenType.WHILE);
-                tokens.add(new Token(TokenType.WHILE, keyword));
-                break;
         }
     }
+
+//    private boolean match(char expected) {
+//        // Matches the current character if it equals `expected`, and advances
+//        if String.charAr
+//        return false; // placeholder
+//
+//
+//    }
+//
+//    public boolean hasNext() {
+//        return (c != -1);
+//    }
+
 }

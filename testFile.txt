@@ -1,20 +1,9 @@
-entry() { --- this serves as main() in java
-    function add(a, b) {
-        return a + b;
-    }
-    var price <- 10, tax <- 8, discount <- -3;
-
-    if (x > 5) {
-        y <- 10;
-    } elif (x = 3) {
-        y <- 9;
-    } else {
-        y <- 5;
-    }
-
-    run {
-        print x;
-        x <- x * 2;
-    } while (x < 10)
-
+function add(a, b) {
+    return a + b;
+}
+var x + y; ---this is comment
+function entry() {
+  var x <- 1;
+  var y <- 2;
+  return add(x, y);
 }
