@@ -1,0 +1,18 @@
+function entry() {
+    var x <- 1, y <- 2;
+    var result <- addfun(x, y);
+    print result;
+    var x <- input;
+    while (x < 1000){
+        x <- mul(x, x);
+        print x;
+    }
+}
+
+function addfun(a, b) {
+    return a + b;
+}
+
+function mul(a, b){
+    return a * b;
+}
